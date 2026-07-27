@@ -1,321 +1,132 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="ko" data-theme="neon" data-build="a1b2c3d4">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>홍대 유흥 꿀팁 - 정보</title>
-    <meta name="description" content="홍대 유흥, 제대로 즐기고 싶냐? 진짜만 골라주는 꿀팁 대방출. 클럽, 술집, 데이트 코스까지 bro들의 리얼 후기로 홍대 밤을 책임진다. 전화상담 010-6279-0862">
-    <meta name="keywords" content="홍대 유흥, 홍대 꿀팁, 홍대 클럽, 홍대 술집, 홍대 밤문화, 홍대 데이트, 홍대 놀거리, 홍대 핫플">
-    <meta name="author" content="t3b06-hd-night-tip-1">
-    <meta name="bpaas-design-system" content="brutalist-avantgarde">
-    <meta name="bpaas-design-theme" content="kr-raw-concrete">
-    <link rel="canonical" href="https://t3b06-hd-night-tip-1.vercel.app/">
-    <!-- OG 메타 -->
-    <meta property="og:title" content="홍대 유흥 꿀팁 - 정보">
-    <meta property="og:description" content="홍대 유흥, 제대로 즐기고 싶냐? 진짜만 골라주는 꿀팁 대방출. 클럽, 술집, 데이트 코스까지 bro들의 리얼 후기로 홍대 밤을 책임진다.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://t3b06-hd-night-tip-1.vercel.app/">
-    <meta property="og:locale" content="ko_KR">
-    <meta property="og:site_name" content="홍대 유흥 꿀팁">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="홍대 유흥 꿀팁 - 정보">
-    <meta name="twitter:description" content="홍대 유흥, 제대로 즐기고 싶냐? 진짜만 골라주는 꿀팁 대방출.">
-    <style>
-        /* RESET & BASE */
-        *, *::before, *::after {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        html {
-            font-size: 16px;
-            scroll-behavior: smooth;
-        }
-        body {
-            font-family: 'Helvetica Neue', Arial, sans-serif;
-            background-color: #1a1a1a;
-            color: #e0e0e0;
-            line-height: 1.6;
-            -webkit-font-smoothing: antialiased;
-        }
-        /* brutalist typography */
-        h1, h2, h3, h4, h5, h6 {
-            font-weight: 900;
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-            color: #f5c518;
-            margin-bottom: 0.5rem;
-        }
-        h1 {
-            font-size: 3rem;
-            line-height: 1.1;
-            border-left: 8px solid #f5c518;
-            padding-left: 1rem;
-        }
-        h2 {
-            font-size: 2.2rem;
-            border-bottom: 3px solid #f5c518;
-            padding-bottom: 0.3rem;
-            margin-top: 2rem;
-        }
-        h3 {
-            font-size: 1.6rem;
-            margin-top: 1.5rem;
-        }
-        p, li, blockquote {
-            font-size: 1.1rem;
-            margin-bottom: 1rem;
-        }
-        a {
-            color: #f5c518;
-            text-decoration: underline;
-            font-weight: bold;
-        }
-        a:hover {
-            color: #ffffff;
-            background-color: #f5c518;
-            text-decoration: none;
-            padding: 0 0.2rem;
-        }
-        /* LAYOUT - full bleed */
-        .container {
-            max-width: 1100px;
-            margin: 0 auto;
-            padding: 2rem 1.5rem;
-        }
-        @media (max-width: 768px) {
-            h1 { font-size: 2.2rem; }
-            h2 { font-size: 1.6rem; }
-            .container { padding: 1.2rem; }
-        }
-        /* nav-present */
-        nav {
-            background-color: #111;
-            padding: 1rem 1.5rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            border-bottom: 4px solid #f5c518;
-        }
-        nav .logo {
-            font-size: 1.8rem;
-            font-weight: 900;
-            color: #f5c518;
-            text-decoration: none;
-            text-transform: uppercase;
-        }
-        nav .logo:hover {
-            color: #fff;
-            background: transparent;
-            padding: 0;
-        }
-        nav ul {
-            list-style: none;
-            display: flex;
-            gap: 2rem;
-        }
-        nav ul li a {
-            color: #e0e0e0;
-            text-decoration: none;
-            font-weight: 700;
-            font-size: 1.1rem;
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-            padding: 0.3rem 0;
-        }
-        nav ul li a:hover {
-            color: #111;
-            background-color: #f5c518;
-            padding: 0.3rem 0.5rem;
-        }
-        /* hamburger-menu */
-        .hamburger-menu {
-            display: none;
-            flex-direction: column;
-            gap: 5px;
-            background: none;
-            border: none;
-            cursor: pointer;
-            padding: 0.3rem;
-        }
-        .hamburger-menu span {
-            display: block;
-            width: 28px;
-            height: 3px;
-            background: #f5c518;
-            border-radius: 2px;
-        }
-        @media (max-width: 768px) {
-            nav ul {
-                display: none;
-                flex-direction: column;
-                position: absolute;
-                top: 70px;
-                right: 0;
-                background: #111;
-                width: 100%;
-                padding: 1.5rem 2rem;
-                gap: 1.2rem;
-                border-bottom: 4px solid #f5c518;
-            }
-            nav ul.active {
-                display: flex;
-            }
-            .hamburger-menu {
-                display: flex;
-            }
-            nav {
-                position: relative;
-                flex-wrap: wrap;
-            }
-        }
-        /* card grid */
-        .card-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 1.5rem;
-            margin: 2rem 0;
-        }
-        .card {
-            background-color: #222;
-            border: 2px solid #333;
-            padding: 1.5rem;
-            border-radius: 0;
-            transition: 0.2s;
-        }
-        .card:hover {
-            border-color: #f5c518;
-            transform: translateY(-4px);
-        }
-        .card h3 {
-            margin-top: 0;
-            font-size: 1.4rem;
-        }
-        .card p {
-            font-size: 1rem;
-        }
-        /* faq section */
-        .faq-item {
-            border-bottom: 1px solid #333;
-            padding: 1.2rem 0;
-        }
-        .faq-item h4 {
-            font-weight: 800;
-            color: #f5c518;
-            margin-bottom: 0.4rem;
-            font-size: 1.2rem;
-        }
-        .faq-item p {
-            margin-bottom: 0;
-        }
-        /* json-ld & tel-link */
-        .tel-link {
-            display: inline-block;
-            background-color: #f5c518;
-            color: #111;
-            font-weight: 900;
-            padding: 0.8rem 2rem;
-            text-decoration: none;
-            font-size: 1.4rem;
-            margin: 1.5rem 0;
-            border: 2px solid #f5c518;
-            transition: 0.2s;
-        }
-        .tel-link:hover {
-            background-color: #111;
-            color: #f5c518;
-            border-color: #f5c518;
-        }
-        footer {
-            background-color: #111;
-            text-align: center;
-            padding: 2rem;
-            border-top: 4px solid #f5c518;
-            margin-top: 3rem;
-        }
-        footer p {
-            font-size: 0.9rem;
-            color: #888;
-        }
-        /* responsive-768 */
-        @media (max-width: 768px) {
-            .card-grid {
-                grid-template-columns: 1fr;
-            }
-            .tel-link {
-                font-size: 1.2rem;
-                padding: 0.7rem 1.2rem;
-            }
-        }
-    </style>
+  <meta charset="UTF-8">
+  <title>홍대 유흥 꿀팁 — 정보</title>
+  <meta name="description" content="홍대 유흥을 처음 찾는 사람들을 위해 인원 규모, 방문 시간, 목적에 따라 다른 준비와 팁을 정리했습니다. 언제, 어디서, 누구와 가야 최적의 밤을 즐길 수 있는지 상세히 안내합니다.">
+  <meta name="keywords" content="홍대, 유흥, 꿀팁, 처음 방문, 규모별 준비, 시간대별 추천, 목적별 선택">
+  <link rel="canonical" href="https://hongdae-club-trend.program-school.online/about.html">
+  <meta property="og:title" content="홍대 유흥 꿀팁 — 처음 방문자를 위한 조건별 선택 안내">
+  <meta property="og:description" content="홍대 유흥을 처음 찾는 사람들을 위해 인원 규모·시간대·목적에 따라 다른 준비와 팁을 정리했습니다. 최적의 밤을 위한 선택 기준을 확인해 보세요.">
+  <meta property="og:url" content="https://hongdae-club-trend.program-school.online/about.html">
+  <meta property="og:type" content="website">
+  <!-- CSS 파일은 이전 페이지와 동일하게 로드합니다 -->
+  <link rel="stylesheet" href="/static/css/main.css">
 </head>
-<body>
-    <!-- nav-present + hamburger-menu -->
-    <nav>
-        <a href="/" class="logo">HONGDAE NIGHT</a>
-        <button class="hamburger-menu" aria-label="메뉴 열기" onclick="this.nextElementSibling.classList.toggle('active')">
-            <span></span>
-            <span></span>
-            <span></span>
-        </button>
-        <ul>
-            <li><a href="/">홈</a></li>
-            <li><a href="/info">정보</a></li>
-            <li><a href="/guide">가이드</a></li>
-            <li><a href="/review">리뷰</a></li>
-            <li><a href="#contact">문의</a></li>
-        </ul>
-    </nav>
+<body class="t-txt-2f5z">
 
-    <main class="container">
-        <h1>🔥 홍대 유흥 정보<br>bro들이 직접 밝힌다</h1>
-        <p>홍대 밤문화, 막연하게 돌아다니지 마라. 시간은 금이고 너의 돈은 소중하다. 여기 진짜 내돈내산 후기 + 운영자 10년 차 형님들의 꿀팁을 모조리 때려박았다. 클럽, 술집, 데이트 코스까지 — 이거 보면 너도 홍대 고인물 된다.</p>
+  <!-- 상단 네비게이션 (공통) -->
+  <nav class="k-top-agzl">
+    <a href="/index.html">홈</a>
+    <a href="/info.html" class="active">정보</a>
+    <a href="/tips.html">꿀팁</a>
+    <a href="/faq.html">FAQ</a>
+    <a href="/contact.html">연락처</a>
+  </nav>
 
-        <!-- 지역 시그널: 상세 위치 -->
-        <section style="background:#222; padding:1.5rem; border-left:6px solid #f5c518; margin:2rem 0;">
-            <h2>📍 지역 시그널 – 홍대입구 역세권</h2>
-            <p><strong>정확한 범위:</strong> 홍대입구역 1번~9번 출구 반경 500m, 상수역 방면 카페거리, 와우산로 일대. 클럽은 '고고', 'NB2', '매드홀릭' 계열 포함. 술집은 '전통주점', '펍', '룸-salon' 믹스. 이 지역 밤 9시 이후는 완전 다른 세상.</p>
-            <p><strong>꿀타임:</strong> 수요일~토요일 22:00~04:00. 일요일은 힐링 위주. 월화는 비수기지만 오히려 조용히 즐기기 좋음.</p>
-        </section>
+  <!-- 페이지 헤더 -->
+  <section class="q-wrap-sh4l">
+    <h1>홍대 유흥 정보</h1>
+    <p>홍대는 밤마다 살아나는 거리 문화와 다채로운 엔터테인먼트가 공존하는 특별한 공간입니다. 이 페이지에서는 인원 규모, 방문 시점, 목적에 따라 맞춤형 정보를 제공해 처음 방문하는 분들이 불필요한 시행착오 없이 즐거운 밤을 보낼 수 있도록 돕습니다.</p>
+    <p>각 섹션은 실전 경험을 바탕으로 한 체크리스트 형식으로 구성돼 있어, 상황에 맞는 준비물을 빠르게 확인할 수 있습니다.</p>
+  </section>
 
-        <!-- 카드 그리드 3개: 핵심 정보 -->
-        <div class="card-grid">
-            <div class="card">
-                <h3>🎧 클럽 입장 꿀팁</h3>
-                <p>여자 무료, 남자 1~2만 원. 단, 얼리버드(10시 전)는 남녀 무료인 경우 많음. 신분증 안 들고 가면 무조건 컷. '친구랑 같이 왔어요'는 효과 없음. <strong>입구에서 줄 서지 말고 '게스트리스트' 검색해서 이름 올리는 게 실전.</strong></p>
-            </div>
-            <div class="card">
-                <h3>🍺 술집 추천 라인업</h3>
-                <p>분위기 중요하면 '모멘트' 계열, 가성비는 '치맥포차' 골목, 독특한 경험 원하면 '전통주점 溫'. <strong>내 주관적인 원픽은 '와우산로 14길'에 있는 '형제포차' — 가격도 착하고 안주 퀄 미쳤다.</strong></p>
-            </div>
-            <div class="card">
-                <h3>❤️ 데이트 코스 (꽁냥꽁냥)</h3>
-                <p>카페 → 맛집 → 펍 → 클럽 or 산책. <strong>비밀 코스 공개: 연남동 쪽 '낭만포차'에서 야외석 먹고, '홍대 걷고싶은 거리'에서 사진 찍고, '상수역 9번 출구' 앞 클럽 가면 하루 코스. </strong>지루할 틈이 없다.</p>
-            </div>
-        </div>
+  <!-- 인원 규모별 가이드 -->
+  <section class="n-body-kvo0">
+    <h2>인원 규모에 따른 준비 팁</h2>
+    <div class="m-item-lkm3">
+      <h3>소규모(2~4명) 파티</h3>
+      <p>친구 몇 명과 가볍게 즐기려면 입장료가 저렴하고 분위기가 아늑한 바를 선택하는 것이 좋습니다. 사전 예약이 가능한 곳은 대기 시간을 최소화해 주고, 좌석이 제한된 경우 조용히 대화를 이어가기 쉬워요.</p>
+      <p>주요 체크포인트: 예약 가능 여부, 테이블 배치, 음료 1인당 최소 주문량. 특히 피크 시간대(22시~24시)에는 미리 좌석을 확보하면 대기 없이 바로 입장할 수 있습니다.</p>
+    </div>
+    <div class="m-item-lkm3">
+      <h3>중규모(5~12명) 그룹</h3>
+      <p>단체 손님이 많아지는 저녁 시간대에는 라운지 형태의 클럽이 유리합니다. 미리 인원 수를 알려주면 대형 테이블을 배정받을 수 있고, 단체 할인이나 프리세트 메뉴를 제공하는 곳도 있습니다.</p>
+      <p>주요 체크포인트: 최소 인원 조건, 단체 할인 혜택, 사전 주문 시스템. 예약 전 전화나 모바일 앱으로 정확한 인원과 시간을 전달하면 원활한 입장이 가능합니다.</p>
+    </div>
+    <div class="m-item-lkm3">
+      <h3>대규모(13명 이상) 파티</h3>
+      <p>대규모 모임은 클럽 내부 전용 파티룸이나 VIP 라운지를 활용하는 것이 효율적입니다. 이때는 사전 계약서와 예산 조율이 필수이며, 보안 검사를 위한 신분증 제시가 요구될 수 있습니다.</p>
+      <p>주요 체크포인트: 파티룸 예약 절차, 최소 사용 시간, 추가 비용(음향, 조명, 전용 바). 사전에 현장 담당자를 지정해 두면 현장 진행이 원활합니다.</p>
+    </div>
+  </section>
 
-        <!-- FAQ 섹션 -->
-        <h2>💬 Bro들의 FAQ</h2>
-        <div class="faq-item">
-            <h4>Q: 홍대 처음 가는데 무조건 가야 하는 곳?</h4>
-            <p>A: 클럽 '고고 (GOGO)'. 입장료 1만 원대, 음악 좋고 사람들 수준 괜찮음. 단, 친구랑 같이 가. 혼자 가면 쓸쓸하다.</p>
-        </div>
-        <div class="faq-item">
-            <h4>Q: 데이트 코스 예산 얼마나?</h4>
-            <p>A: 저녁 5만 원+클럽 1~2만 원 = 약 7~8만 원. 술 많이 마시면 12만 원까지. <strong>돈 좀 아끼고 싶으면 '무료 클럽 게스트리스트' + '길거리 음식' 조합 추천.</strong></p>
-        </div>
-        <div class="faq-item">
-            <h4>Q: 홍대 밤문화 진짜 안전함?</h4>
-            <p>A: 인구 밀도 높고 경찰 순찰도 있지만, <strong>찌르는 사람, 술 취한 매너 없는 남자들 피하려면 '메인 스트리트' 벗어나지 마라.</strong> 골목길은 3명 이상 다니는 게 안전.</p>
-        </div>
-        <div class="faq-item">
-            <h4>Q: 술 취해서 집 가는 법?</h4>
-            <p>A: 홍대입구역 막차 00:40분. 늦으면 택시 잡아라. <strong>밤 12시 이후 택시는 호출제로만 가능 (카카오 필수).</strong> 강남/신논현 방면 택시비 2만~3만 원.</p>
-        </div>
+  <!-- 방문 시점별 팁 -->
+  <section class="n-body-kvo0">
+    <h2>시간대별 최적 전략</h2>
+    <div class="m-item-lkm3">
+      <h3>초반(18시~20시) – 분위기 탐색</h3>
+      <p>이 시간대는 아직 인파가 몰리지 않아 각 바와 클럽의 분위기를 살피기 좋은 순간입니다. 주류 가격이 비교적 저렴하고, 사전 체크인 혜택을 제공하는 곳이 많아 가성비를 챙기기에 안성맞춤입니다.</p>
+      <p>추천 액션: 여러 장소를 가볍게 돌며 분위기와 음악 장르를 비교하고, 마음에 드는 곳을 선택해 본격적인 파티를 시작하세요.</p>
+    </div>
+    <div class="m-item-lkm3">
+      <h3>중반(20시~22시) – 파티 고조</h3>
+      <p>주류 판매가 본격화되고 DJ 라인업이 시작되는 시점으로, 가장 활기찬 무드를 체험할 수 있습니다. 이때는 입장 대기열이 길어질 수 있으니, 미리 도착해 대기 시간을 최소화하는 것이 좋습니다.</p>
+      <p>추천 액션: 입구에서 라인 체크를 하며, 현장에서 즐길 수 있는 프로모션(1+1, 무료 안주 등)을 확인하고 빠르게 입장하세요.</p>
+    </div>
+    <div class="m-item-lkm3">
+      <h3>후반(22시~02시) – 클라이맥스</h3>
+      <p>클럽의 절정이 되는 시간대로, 에너지 넘치는 음악과 조명 효과가 최고조에 달합니다. 이때는 보안 체크가 강화될 수 있으니, 신분증을 반드시 소지하고 복장 규정을 확인하세요.</p>
+      <p>추천 액션: 안전하게 귀가할 수 있는 교통수단(택시, 대중교통) 예약을 미리 해두고, 음료 섭취량을 조절해 다음 날 컨디션을 유지하세요.</p>
+    </div>
+  </section>
 
-        <!-- 전화 상담 링크 (tel-link) -->
-        <div style="text-align:center; margin:3rem 0;">
-            <p><strong>진짜 형님들의 실시간 상담이 필요해? 전화해라, 세상이 바뀐다.</strong></p>
-            <a href="tel:010-6279-0862" class="tel-link">📞 010
+  <!-- 목적별 맞춤 정보 -->
+  <section class="n-body-kvo0">
+    <h2>목적에 따른 선택 기준</h2>
+    <div class="m-item-lkm3">
+      <h3>친목·소통</h3>
+      <p>친구와 대화를 이어가며 편하게 즐기고 싶다면, 조용한 라운지 바를 추천합니다. 소음 수준이 낮고, 테이블이 넓어 식사와 술을 동시에 즐길 수 있습니다.</p>
+      <p>핵심 포인트: 좌석 간 거리, 음료 메뉴 다양성, 조명 밝기. 음향이 과격하지 않으면 대화가 끊기지 않아 더욱 자연스럽게 친목을 도모할 수 있습니다.</p>
+    </div>
+    <div class="m-item-lkm3">
+      <h3>댄스·클럽 파티</h3>
+      <p>에너지 넘치는 댄스를 즐기고 싶다면, 대형 클럽이나 EDM 중심의 라운지를 선택하세요. 강렬한 비트와 조명 효과가 밤을 더욱 뜨겁게 만들어 줍니다.</p>
+      <p>핵심 포인트: DJ 라인업, 사운드 시스템, 무대와 관객 거리. 입장 전 신발 착용 규정(스니커즈·플랫)도 확인해 주세요.</p>
+    </div>
+    <div class="m-item-lkm3">
+      <h3>문화·예술 체험</h3>
+      <p>홍대는 라이브 음악, 인디 공연, 아트 바 등 문화적 색채가 짙은 장소가 많습니다. 공연 일정과 입장료를 사전에 확인하고, 티켓을 미리 구매하면 자리 확보가 수월합니다.</p>
+      <p>핵심 포인트: 공연 시간표, 티켓 구매 경로, 공연 후 휴식 공간. 공연 전후로 주변 카페에서 휴식하면 더 풍성한 밤을 경험할 수 있습니다.</p>
+    </div>
+  </section>
+
+  <!-- 안전·편의 체크리스트 -->
+  <section class="n-body-kvo0">
+    <h2>안전 & 편의 체크리스트</h2>
+    <div class="m-item-lkm3">
+      <h3>보안 및 신분증</h3>
+      <p>입구에서 신분증 확인은 필수이며, 가짜 신분증 사용은 강력히 제재됩니다. 또한, 주류가 제공되는 구역에서는 19세 이상임을 확인받으니 미리 준비해 주세요.</p>
+      <p>핵심 팁: 신분증을 손쉽게 꺼낼 수 있도록 지갑에 별도 포켓을 마련하고, 스마트폰에 신분증 사진을 저장해 두면 빠르게 제시할 수 있습니다.</p>
+    </div>
+    <div class="m-item-lkm3">
+      <h3>음주와 교통</h3>
+      <p>술을 마시고 귀가할 경우, 대중교통 운영 시간을 반드시 확인하고, 택시 앱을 미리 실행해 두세요. 특히 야간 버스는 1~2시간 간격이므로, 마지막 도착 시간을 놓치지 않도록 주의합니다.</p>
+      <p>핵심 팁: 동행자와 귀가 시간을 약속하고, 긴급 상황 시 사용할 수 있는 연락처를 미리 공유해 두면 안전합니다.</p>
+    </div>
+    <div class="m-item-lkm3">
+      <h3>건강 관리</h3>
+      <p>술을 많이 마시게 될 경우 수분 보충이 중요합니다. 물을 함께 주문하거나 미니바에 비치된 물병을 활용해 탈수를 예방하세요. 또한, 음식을 함께 먹으면 알코올 흡수를 완화할 수 있습니다.</p>
+      <p>핵심 팁: 과음 예방을 위해 1시간에 한 잔씩 물을 마시고, 안주를 곁들여 음주 페이스를 조절하는 것이 좋습니다.</p>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="n-body-kvo0">
+    <h2>자주 묻는 질문</h2>
+    <div class="m-item-lkm3">
+      <h3>Q1. 홍대 클럽 입장료는 어떻게 확인하나요?</h3>
+      <p>대부분의 클럽은 공식 홈페이지나 인스타그램 스토리에서 입장료와 프로모션 정보를 실시간으로 업데이트합니다. 현장에서는 입구에 부착된 안내판을 확인하거나, 직원에게 직접 문의하면 정확한 금액을 알 수 있습니다.</p>
+    </div>
+    <div class="m-item-lkm3">
+      <h3>Q2. 무인 주류 판매점이 있나요?</h3>
+      <p>몇몇 바에서는 자동 주류 판매 기계를 운영하지만, 대부분은 바텐더가 직접 주문을 받습니다. 무인 판매 기계를 이용하려면 최소 주문 금액이 설정돼 있을 수 있으니, 사전에 확인하세요.</p>
+    </div>
+    <div class="m-item-lkm3">
+      <h3>Q3. 비알코올 음료도 제공하나요?</h3>
+      <p>네, 최근 많은 장소에서 무알코올 칵테일, 과일 주스, 스무디 등을 제공하고 있습니다. 음료 메뉴판에서 “무알코올” 표기를 찾아 주문하면 됩니다.</p>
+    </div>
+  </section>
+
 </body>
 </html>
