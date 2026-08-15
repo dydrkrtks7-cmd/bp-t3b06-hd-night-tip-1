@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>글 목록 (2/2) · t3b06-hd-night-tip-1</title>
+  <meta name="description" content="t3b06-hd-night-tip-1에 올라온 글 목록입니다.">
+  <link rel="canonical" href="https://hongdae-club-trend.program-school.online/posts-2.html">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <style>
+ 
+ :root {
+ --bg-color: #142217;
+ --bg-card: #1c3322;
+ --accent: #10b981;
+ --text: #e2e8f0;
+ --text-muted: #94a3b8;
+ --font-stack: 'Pretendard', sans-serif;
+ --border: rgba(255, 255, 255, 0.08);
+ --glass-bg: rgba(255, 255, 255, 0.02);
+ --glass-border: rgba(255, 255, 255, 0.05);
+ }
+ * { margin: 0; padding: 0; box-sizing: border-box; }
+ body {
+ background-color: var(--bg-color);
+ color: var(--text);
+ font-family: var(--font-stack);
+ line-height: 1.8;
+ letter-spacing: -0.01em;
+ padding: 0 24px;
+ overflow-x: hidden;
+ }
+ .wrapper {
+ max-width: 960px;
+ margin: 0 auto;
+ padding: 80px 0;
+ }
+ header {
+ border-bottom: 1px solid var(--border);
+ padding-bottom: 30px;
+ margin-bottom: 60px;
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ }
+ .brand {
+ font-size: 1.6rem;
+ font-weight: 900;
+ color: #fff;
+ text-transform: uppercase;
+ letter-spacing: 0.06em;
+ text-decoration: none;
+ transition: color 0.3s, transform 0.3s;
+ display: flex;
+ align-items: center;
+ gap: 8px;
+ }
+ .brand:hover {
+ color: var(--accent);
+ transform: translateX(2px);
+ }
+ nav {
+ display: flex;
+ gap: 28px;
+ }
+ nav a {
+ color: var(--text-muted);
+ text-decoration: none;
+ font-size: 1rem;
+ font-weight: 700;
+ transition: color 0.3s;
+ position: relative;
+ }
+ nav a::after {
+ content: '';
+ position: absolute;
+ width: 0;
+ height: 2px;
+ bottom: -6px;
+ left: 0;
+ background-color: var(--accent);
+ transition: width 0.3s;
+ }
+ nav a:hover {
+ color: #fff;
+ }
+ nav a:hover::after {
+ width: 100%;
+ }
+ main {
+ padding-bottom: 60px;
+ }
+ .badge {
+ display: inline-block;
+ padding: 6px 14px;
+ background: rgba(255, 255, 255, 0.03);
+ border: 1px solid var(--glass-border);
+ border-radius: 20px;
+ font-size: 0.8rem;
+ font-weight: 800;
+ color: var(--accent);
+ margin-bottom: 28px;
+ text-transform: uppercase;
+ letter-spacing: 0.12em;
+ }
+ h1 {
+ font-size: 3.2rem;
+ font-weight: 900;
+ color: #fff;
+ line-height: 1.2;
+ margin-bottom: 36px;
+ letter-spacing: -0.03em;
+ background: linear-gradient(to right, #ffffff 30%, var(--accent) 100%);
+ -webkit-background-clip: text;
+ -webkit-text-fill-color: transparent;
+ }
+ .hero-container {
+ position: relative;
+ border-radius: 20px;
+ padding: 50px;
+ background: linear-gradient(145deg, var(--bg-card) 0%, rgba(255,255,255,0.01) 100%);
+ border: 1px solid var(--glass-border);
+ margin-bottom: 60px;
+ box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+ overflow: hidden;
+ }
+ .hero-container::before {
+ content: '';
+ position: absolute;
+ top: -50%;
+ left: -50%;
+ width: 200%;
+ height: 200%;
+ background: radial-gradient(circle, rgba(255,255,255,0.03) 0%, transparent 60%);
+ pointer-events: none;
+ }
+ .desc-block {
+ font-size: 1.18rem;
+ color: var(--text);
+ margin-bottom: 40px;
+ font-weight: 400;
+ text-align: justify;
+ }
+ .desc-block p {
+ margin-bottom: 24px;
+ text-indent: 4px;
+ }
+ .phone-badge {
+ display: inline-flex;
+ align-items: center;
+ gap: 14px;
+ padding: 20px 40px;
+ background: linear-gradient(135deg, var(--accent) 0%, rgba(255,255,255,0.05) 200%);
+ color: #fff;
+ border-radius: 50px;
+ text-decoration: none;
+ font-weight: 900;
+ font-size: 1.3rem;
+ box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+ transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
+ border: 1px solid rgba(255,255,255,0.1);
+ }
+ .phone-badge:hover {
+ transform: translateY(-3px) scale(1.02);
+ box-shadow: 0 10px 30px rgba(0,0,0,0.35);
+ border-color: rgba(255,255,255,0.25);
+ }
+ .cards-grid {
+ display: grid;
+ grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+ gap: 28px;
+ margin-top: 60px;
+ }
+ .card {
+ background: var(--bg-card);
+ border: 1px solid var(--border);
+ padding: 36px;
+ border-radius: 16px;
+ transition: border-color 0.3s, transform 0.3s, box-shadow 0.3s;
+ box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+ }
+ .card:hover {
+ border-color: var(--accent);
+ transform: translateY(-5px);
+ box-shadow: 0 15px 30px rgba(0,0,0,0.25);
+ }
+ .card h3 {
+ font-size: 1.35rem;
+ font-weight: 800;
+ color: #fff;
+ margin-bottom: 16px;
+ }
+ .card p {
+ font-size: 1rem;
+ color: var(--text-muted);
+ line-height: 1.7;
+ }
+ .review-header {
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ margin-bottom: 20px;
+ font-size: 0.9rem;
+ font-weight: 800;
+ border-bottom: 1px dashed var(--border);
+ padding-bottom: 12px;
+ }
+ .review-stars {
+ color: #fbbf24;
+ letter-spacing: 2px;
+ }
+ .review-nick {
+ color: #fff;
+ }
+ .review-date {
+ color: var(--text-muted);
+ }
+ footer {
+ border-top: 1px solid var(--border);
+ padding-top: 50px;
+ margin-top: 100px;
+ text-align: center;
+ font-size: 0.95rem;
+ color: var(--text-muted);
+ }
+ footer a {
+ color: var(--text-muted);
+ text-decoration: none;
+ margin: 0 14px;
+ font-weight: 700;
+ transition: color 0.3s;
+ }
+ footer a:hover {
+ color: var(--accent);
+ }
+ .blog-link {
+ display: inline-block;
+ margin-top: 28px;
+ color: var(--accent);
+ text-decoration: none;
+ font-weight: 800;
+ border-bottom: 1px solid transparent;
+ transition: border-color 0.3s, transform 0.3s;
+ }
+ .blog-link:hover {
+ border-color: var(--accent);
+ transform: translateX(3px);
+ }
+ @media(max-width: 768px) {
+ body { padding: 0 16px; }
+ .wrapper { padding: 50px 0; }
+ h1 { font-size: 2.2rem; }
+ .hero-container { padding: 28px; }
+ .phone-badge { width: 100%; justify-content: center; font-size: 1.1rem; }
+ header { flex-direction: column; gap: 20px; align-items: flex-start; }
+ nav { width: 100%; justify-content: space-between; }
+ }
+ 
+ </style>
+  <meta property="og:title" content="글 목록 (2/2) · t3b06-hd-night-tip-1">
+  <meta property="og:description" content="t3b06-hd-night-tip-1에 올라온 글 목록입니다.">
+  <meta property="og:url" content="https://hongdae-club-trend.program-school.online/posts-2.html">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary">
+</head>
+<body>
+  <div class="container">
+    <header>
+ <a href="index.html" class="brand">👑 홍대 유흥</a>
+ <nav>
+ <a href="index.html">홈</a>
+ <a href="about.html">소개</a>
+ <a href="blog.html">블로그</a>
+ </nav>
+ </header>
+    <main>
+      <h1>글 목록</h1>
+      <p>전체 38개 · 2/2 페이지</p>
+      <ul class="post-list">
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260722-0243.html">홍대 유흥 꿀팁 확인하며 홍대 노래방 추천정보 구경하기</a>
+        <p class="post-item__summary">최적의 노래방을 찾기 위해서는 인원 구성, 원하는 분위기, 접근성이라는 세 가지 요소가 완벽하게 맞물려야 합니다. 친구들과의 소규모 모임인지 아니면 단체 회식인지에 따라 선택할 수 있는 매장의 폭이</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260722-0244.html">홍대 유흥 꿀팁 활용해서 공덕 셔츠룸 추천정보 파악하기</a>
+        <p class="post-item__summary">여러분은 새로운 유흥 업소를 선택할 때 가장 먼저 무엇을 확인하시나요? 많은 분이 지인의 입소문에 의존하지만, 실제로 본인에게 맞는 공간을 찾으려면 더 구체적인 비교 기준이 필요합니다. 홍대 유흥 </p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260722-0245.html">홍대 유흥 꿀팁 활용하여 연남 유흥 추천정보 확인하는 절차</a>
+        <p class="post-item__summary">홍대 유흥 꿀팁을 검색하는 이들은 주로 합리적인 선택을 원합니다. 처음 연남 지역을 방문하는 사람들은 어디가 좋은지 알기 어렵습니다. 따라서 체계적인 탐색 절차를 익히는 것이 우선입니다.</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260722-0246.html">홍대 유흥 꿀팁 비교 분석을 통한 마곡 가라오케 추천정보 결정</a>
+        <p class="post-item__summary">홍대 유흥 꿀팁을 찾다가 마곡 지역까지 확장하는 경우가 많습니다. 가라오케를 선택할 때는 단순히 화려한 외관만 봐서는 안 됩니다. 본인이 지불하는 비용이 합당한지 두 가지 방식을 통해 비교해야 합니</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260722-0247.html">홍대 유흥 꿀팁 따라가다 흔히 겪는 마곡 유흥 추천정보 실패 지점</a>
+        <p class="post-item__summary">많은 이들이 홍대 유흥 꿀팁을 습득한 뒤 마곡 지역으로 넘어가지만 실패하는 경우가 잦습니다. 가장 먼저 짚어야 할 실패 지점은 사전 예약 절차를 무시하는 태도입니다. 예약 없이 방문하면 자리가 없을</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260722-0248.html">홍대 유흥 꿀팁 통해 합정 노래방 추천정보 확인용 체크리스트</a>
+        <p class="post-item__summary">홍대 유흥 꿀팁을 참고하여 합정 노래방을 고를 때 접근성을 최우선으로 고려해야 합니다. 대중교통 이용이 용이한지, 아니면 주차가 가능한지가 판단의 척도가 됩니다. 위치와 접근성을 포함한 핵심 체크리</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260722-0249.html">홍대 유흥 꿀팁 활용하는 연남 클럽 추천정보 및 이용 가이드</a>
+        <p class="post-item__summary">처음 홍대 인근을 방문한 이들이 겪는 가장 당혹스러운 순간은 복잡한 골목 사이에서 목적지를 찾지 못하고 헤매는 상황입니다. 음악 소리가 들리는 곳을 무작정 따라가기보다는 미리 동선을 파악하고 각 장</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260722-0250.html">홍대 유흥 꿀팁으로 알아보는 합정 셔츠룸 추천정보 선택 노하우</a>
+        <p class="post-item__summary">흔히 셔츠룸이라고 하면 특정한 정형화된 모습만을 떠올리며 부정적인 선입견을 갖는 경우가 많습니다. 하지만 이는 대중적인 문화 공간의 한 형태일 뿐이며 제대로 알고 방문한다면 매우 합리적인 대화의 장</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260722-0251.html">홍대 유흥 꿀팁을 적용한 공덕 가라오케 추천정보 분석 가이드</a>
+        <p class="post-item__summary">쾌적한 음향 시설과 독립된 공간 그리고 친절한 서비스라는 세 가지 충족 조건을 갖춘 곳을 찾는 것은 쉬운 일이 아닙니다. 특히 공덕 일대는 직장인들의 회식 장소로 인기가 많아 퀄리티가 높은 곳을 선</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260722-0252.html">홍대 유흥 꿀팁을 활용한 상수 마사지 추천정보 비교 기준 확인</a>
+        <p class="post-item__summary">여러분은 지친 하루를 마친 뒤 나를 위한 휴식으로 어떤 방법을 선택하고 계십니까? 홍대 인근에서 유흥을 즐긴 후 긴장을 풀어주는 것은 다음 날의 활력을 위해 필수적인 과정입니다. 홍대 유흥 꿀팁 맥</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260722-0253.html">홍대 유흥 꿀팁 활용해 망원 노래방 추천정보 및 신뢰도 판단법</a>
+        <p class="post-item__summary">홍대 유흥 꿀팁을 검색하다 보면 정보의 홍수 속에서 어떤 것이 진짜인지 구분하기 어려울 때가 많습니다. 망원 지역에서 노래방을 선택할 때 후기의 신뢰도를 판별하는 과정을 3단계로 나누어 설명해 드립</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/guide-001-8ujp4n.html">홍대 헌팅포차 말고 조용한 술집 찾아야 하는 이유</a>
+        <p class="post-item__summary">요즘 홍대 가면 다들 시끄러운 헌팅포차로 몰려간다. 사람 많고 북적여야 뭔가 일이 벌어질 것 같으니까. 근데 내 생각은 다르다. 정작 제대로 된 인연이나 대화는 그런 난장판에서 안 나온다. 소음 때</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/juice-1.html">홍대 유흥 꿀팁 안내</a>
+        <p class="post-item__summary">홍대 지역은 다양한 유흥 시설과 문화 공간이 밀집해 있는 곳으로 방문객의 목적에 따라 선택할 수 있는 업종이 매우 다양합니다. 홍대 일대의 밤 문화를 온전하게 즐기기 위해서는 각 업종의 특징과 운영</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/juice-2.html">홍대 유흥 꿀팁</a>
+        <p class="post-item__summary">홍대는 젊음과 열기가 넘치는 공간으로, 낮과는 다른 밤의 매력이 돋보이는 지역입니다. 유흥 문화를 즐기려는 이들은 밤이 깊어질수록 활기찬 분위기를 찾게 되며, 다양한 플레이스가 그들을 기다리고 있습</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/normal-1.html">홍대 유흥 꿀팁</a>
+        <p class="post-item__summary">홍대 주변은 젊음과 에너지가 넘치는 공간으로, 다양한 문화적 경험을 제공합니다. 유흥을 즐길 때에는 지역의 분위기를 먼저 파악하고, 자신의 취향에 맞는 장소를 선택하는 것이 중요합니다. 홍대의 각 </p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/normal-2.html">홍대 유흥 꿀팁과 기록 정리 방법</a>
+        <p class="post-item__summary">홍대 주변의 유흥 정보를 찾아볼 때 가장 중요한 것은 체계적인 기록입니다. 수많은 클럽과 술집이 밀집해 있는 이 지역에서는 단순히 방문하는 것 이상의 노력이 필요합니다. 정보를 습득하고 이를 구조화</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/normal-3.html">홍대 유흥 꿀팁과 관련된 정보</a>
+        <p class="post-item__summary">홍대는 밤이 되면 다양한 사람들이 모이는 활발한 장소로 변합니다. 이런 지역에서 유흥 문화를 즐기려면 기본적인 매너와 규칙을 아는 것이 중요합니다. 특히 처음 방문하는 사람들은 주변 분위기를 잘 파</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/qa-002-8ujp4n.html">홍대에서 헌팅포차 갈 때 제발 뻔한 짓 좀 하지 마라</a>
+        <p class="post-item__summary">다들 헌팅포차 가면 화려한 옷 입고 가서 텐션 높여야 성공한다고 떠드는데 그거 다 틀린 말이다. 오히려 너무 힘준 티 나면 부담스러워서 피하는 경우가 더 많다. 그냥 적당히 깔끔하게 입고 가서 툭툭</p>
+      </li>
+      </ul>
+    <nav class="pager">
+      <a class="pager__link" href="posts.html">1</a>
+      <span class="pager__current">2</span>
+    </nav>
+    </main>
+  </div>
+</body>
+</html>
